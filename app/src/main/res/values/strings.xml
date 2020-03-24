@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">Coronavirus Data</string>
+    <string name="check_internet_access">Ελέγξτε τη σύνδεσή σας</string>
+    <string name="no_data">Τhere is no data for these parameters</string>
+
+</resources>

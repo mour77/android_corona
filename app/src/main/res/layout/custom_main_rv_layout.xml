@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/llCardBack"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="4dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/countryTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|fill_horizontal"
+            android:background="#A50ABF"
+            android:gravity="center"
+            android:padding="10dp"
+
+            android:text="This is a long title to show "
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/state_lastUpdateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|fill_horizontal"
+            android:background="#EBF143"
+            android:drawableStart="@drawable/calendar"
+            android:padding="5dp"
+            android:text="My subtitle..."
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/confirmedTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEBF143"
+            android:drawableStart="@drawable/confirm"
+            android:padding="5dp"
+            android:text="Confirmed "
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/deathTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEBF143"
+
+            android:drawableStart="@drawable/cross_ic"
+            android:padding="5dp"
+            android:text="Deaths"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/recoveredTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFEBF143"
+
+            android:drawableLeft="@drawable/heal"
+            android:padding="5dp"
+            android:text="Recovered"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/llExpandArea"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="320dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="22dp"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                map:cameraZoom="5"
+                map:mapType="normal"
+                android:apiKey="YOUR_API_KEY"
+                map:liteMode="true"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
